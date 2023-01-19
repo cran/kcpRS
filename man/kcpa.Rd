@@ -22,9 +22,8 @@ Finds the most optimal change point(s) in the running statistic time series \cod
 looking at their kernel-based pairwise similarities.
 }
 \references{
-\cite{Arlot, S., Celisse, A., & Harchaoui, Z. (2012). Kernel change-point detection.} \url{http://arxiv.org/abs/1202.3878}
+Arlot, S., Celisse, A., & Harchaoui, Z. (2019). A kernel multiple change-point algorithm via model selection. \emph{Journal of Machine Learning Research}, 20(162), 1-56.
 
-\cite{Cabrieto, J., Tuerlinckx, F., Kuppens, P., Grassmann, M., & Ceulemans, E. (2017). Detecting correlation changes in multivariate time series:
-A comparison of four non-parametric change point detection methods. Behavior Research Methods, 49, 988-1005.}
-\url{https://doi.org/10.3758/s13428-016-0754-9}
+Cabrieto, J., Tuerlinckx, F., Kuppens, P., Grassmann, M., & Ceulemans, E. (2017). Detecting correlation changes in multivariate time series:
+         A comparison of four non-parametric change point detection methods. \emph{Behavior Research Methods}, 49, 988-1005. doi:10.3758/s13428-016-0754-9
 }

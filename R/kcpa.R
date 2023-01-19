@@ -9,14 +9,12 @@
 #' @param wsize Window size
 #'
 #' @return \item{kcpSoln}{A matrix comprised of the minimized variance criterion \emph{Rmin} and the optimal change point location(s) for each \emph{k} from 1 to \code{Kmax}}
+#' 
 #' @importFrom stats dist median
-#' @importFrom Rcpp evalCpp
 #' @useDynLib kcpRS
-#' @references \cite{Arlot, S., Celisse, A., & Harchaoui, Z. (2012). Kernel change-point detection.} \url{http://arxiv.org/abs/1202.3878}
-#'
-#' \cite{Cabrieto, J., Tuerlinckx, F., Kuppens, P., Grassmann, M., & Ceulemans, E. (2017). Detecting correlation changes in multivariate time series:
-#' A comparison of four non-parametric change point detection methods. Behavior Research Methods, 49, 988-1005.}
-#' \url{https://doi.org/10.3758/s13428-016-0754-9}
+#' @references Arlot, S., Celisse, A., & Harchaoui, Z. (2019). A kernel multiple change-point algorithm via model selection. \emph{Journal of Machine Learning Research}, 20(162), 1-56.
+#' @references Cabrieto, J., Tuerlinckx, F., Kuppens, P., Grassmann, M., & Ceulemans, E. (2017). Detecting correlation changes in multivariate time series:
+#'          A comparison of four non-parametric change point detection methods. \emph{Behavior Research Methods}, 49, 988-1005. doi:10.3758/s13428-016-0754-9
 
 
 kcpa <- function(RunStat,
@@ -74,22 +72,34 @@ kcpa <- function(RunStat,
   kcp_res <- getScatterMatrix(II_, X_, H_) #the c function that generates the kcp soln
   II <- kcp_res[[1]]      #minimized variance criterion (unstandardized)
   H <- kcp_res[[2]]       #candidate change point locations
-  Rmin <- II[, N]/N       #standardized variance criterion
+  medianK <- kcp_res[[3]] #median of K
 
-  ##################################################
-  #find change point locations from k=1 to Kmax
-  ##################################################
+  if (medianK == 0) {
+    kcpSoln <- NULL
+  } else {
+    Rmin <- II[, N]/N       #standardized variance criterion
+  
+    ##################################################
+    #find change point locations from k=1 to Kmax
+    ##################################################
+  
+    optimal_CPs <- matrix(0, nrow = D, ncol = Kmax)
+  
+    for (ncp in 1:Kmax) {
+      if (H[ncp + 1, N] != 0) {
+        optimal_CPs[(ncp + 1), (1:ncp)] = locate_cp(H, ncp, wsize)
+      }
+    } #gives the location of the change point given ncp=no. of change points
+  
+    kcpSoln <- cbind(0:Kmax, round(Rmin, 4), optimal_CPs)
+    kcpSoln <- as.data.frame(kcpSoln, row.names = FALSE)
+  
+    colnames(kcpSoln) <- c("k", "Rmin", paste0("CP", 1:Kmax))
+  }
 
-  optimal_CPs <- matrix(0, nrow = D, ncol = Kmax)
-
-  for (ncp in 1:Kmax) {
-    optimal_CPs[(ncp + 1), (1:ncp)] = locate_cp(H, ncp, wsize)
-  } #gives the location of the change point given ncp=no. of change points
-
-  kcpSoln <- cbind(0:Kmax, round(Rmin, 4), optimal_CPs)
-  kcpSoln <- as.data.frame(kcpSoln, row.names = FALSE)
-
-  colnames(kcpSoln) <- c("k", "Rmin", paste0("CP", 1:Kmax))
-
-  return(kcpSoln)
+  output <- list(
+    "kcpSoln" = kcpSoln,
+    "medianK" = medianK
+  )
+  return(output)
 }

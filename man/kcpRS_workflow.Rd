@@ -9,9 +9,17 @@
 \alias{summary.kcpRS_workflow}
 \title{KCP on the Running Statistics Workflow}
 \usage{
-kcpRS_workflow(data, RS_funs = c("runMean", "runVar", "runAR",
-  "runCorr"), wsize = 25, nperm = 1000, Kmax = 10, alpha = 0.05,
-  varTest = FALSE, bcorr = TRUE, ncpu = 1)
+kcpRS_workflow(
+  data,
+  RS_funs = c("runMean", "runVar", "runAR", "runCorr"),
+  wsize = 25,
+  nperm = 1000,
+  Kmax = 10,
+  alpha = 0.05,
+  varTest = FALSE,
+  bcorr = TRUE,
+  ncpu = 1
+)
 
 \method{plot}{kcpRS_workflow}(x, ...)
 
@@ -82,6 +90,6 @@ plot(res)
 }
 }
 \references{
-\cite{Cabrieto, J., Adolf, J., Tuerlinckx, F., Kuppens, P., & Ceulemans, E. (in press). An objective, comprehensive and flexible statistical framework for
- detecting early warning signs of mental health problems. Psychotherapy and Psychosomatics.}\url{https://doi.org/10.1159/000494356}
+Cabrieto, J., Adolf, J., Tuerlinckx, F., Kuppens, P., & Ceulemans, E. (2019). An objective, comprehensive and flexible statistical framework for
+ detecting early warning signs of mental health problems. \emph{Psychotherapy and Psychosomatics}, 88, 184-186. doi:10.1159/000494356
 }

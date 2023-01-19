@@ -4,8 +4,15 @@
 \alias{permTest}
 \title{KCP Permutation Test}
 \usage{
-permTest(data, RS_fun, wsize = 25, nperm = 1000, Kmax = 10,
-  alpha = 0.05, varTest = FALSE)
+permTest(
+  data,
+  RS_fun,
+  wsize = 25,
+  nperm = 1000,
+  Kmax = 10,
+  alpha = 0.05,
+  varTest = FALSE
+)
 }
 \arguments{
 \item{data}{data \emph{N} x \emph{v} dataframe where \emph{N} is the number of time points and \emph{v} the number of variables}
@@ -28,11 +35,12 @@ as output. This output dataframe should have rows that correspond to the time wi
 \item{p_var_test}{P-value of the variance test.}
 \item{p_varDrop_test}{P-value of the variance drop test.}
 \item{perm_rmin}{A matrix of minimized variance criterion for the permuted data.}
+\item{perm_rmin_without_NA}{A matrix of minimized variance criterion for the permuted data without NA values.}
 }
 \description{
 The KCP permutation test implements the variance test and the variance drop test to determine if there is at least one change point in the running statistics
 }
 \references{
-\cite{Cabrieto, J., Tuerlinckx, F., Kuppens, P., Hunyadi, B., & Ceulemans, E. (2018). Testing for the presence of correlation changes
-in a multivariate time series: A permutation based approach. Scientific Reports, 8, 769, 1-20.} \url{https://doi.org/10.1038/s41598-017-19067-2}
+Cabrieto, J., Tuerlinckx, F., Kuppens, P., Hunyadi, B., & Ceulemans, E. (2018). Testing for the presence of correlation changes
+in a multivariate time series: A permutation based approach. \emph{Scientific Reports}, 8, 769, 1-20. doi:10.1038/s41598-017-19067-2
 }

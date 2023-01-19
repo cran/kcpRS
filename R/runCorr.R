@@ -7,7 +7,7 @@
 #' @param data \emph{N} x \emph{v} dataframe where \emph{N} is the no. of time points and \emph{v} the no. of variables
 #' @param wsize window size
 #'
-#' @return Running correlationa time series
+#' @return Running correlations time series
 #' @export
 #' @importFrom roll roll_cor
 #' @importFrom utils combn

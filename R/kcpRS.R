@@ -26,17 +26,23 @@
 #' \item{alpha}{Selected significance level of the permutation test}
 #' \item{subTest_alpha}{Significance level of each subtest. If \code{varTest}=0, \code{subTest_alpha} is equal to \code{alpha} since only the variance drop test is implemented.
 #' If \code{varTest}=1, \code{subTest_alpha}=\code{alpha}/2 since two subtests are carried out and Bonferonni correction is applied.}
-#' \item{BestK}{Optimal number of change points}
+#' \item{BestK}{Optimal number of change points based on grid search}
 #' \item{changePoints}{Change point location(s)}
 #' \item{p_var_test}{P-value of the variance test}
 #' \item{p_varDrop_test}{P-value of the variance drop test}
-#' \item{CPs_given_K}{A matrix comprised of the minimized variance criterion \emph{Rmin} and the optimal change point location(s) for each \emph{k} from 1 to \code{Kmax}
-#' }
-#' @references \cite{Cabrieto, J., Tuerlinckx, F., Kuppens, P., Wilhelm, F., Liedlgruber, M., & Ceulemans, E. (2018). Capturing correlation changes by applying kernel change point
-#' detection on the running correlations. Information Sciences, 447, 117-139.} \url{https://doi.org/10.1016/j.ins.2018.03.010}
+#' \item{CPs_given_K}{A matrix comprised of the minimized variance criterion \emph{Rmin} and the optimal change point location(s) for each \emph{k} from 1 to \code{Kmax}}
+#' \item{changePoints_scree_test}{Optimal number of change points based on scree test}
+#' \item{scree_test}{A matrix comprised of the scree values for each \emph{k} from 1 to \code{Kmax-1}}
+#' \item{medianK}{Median Euclidean distance between all pairs of running statistics}
+#' 
+#' @references Cabrieto, J., Tuerlinckx, F., Kuppens, P., Wilhelm, F., Liedlgruber, M., & Ceulemans, E. (2018). Capturing correlation changes by applying kernel change point
+#' detection on the running correlations. \emph{Information Sciences}, 447, 117-139. doi:10.1016/j.ins.2018.03.010
 #'
-#' \cite{Cabrieto, J., Adolf, J., Tuerlinckx, F., Kuppens, P., & Ceulemans, E. (2018). Detecting long-lived autodependency changes in a multivariate system via change point detection
-#' and regime switching models. Scientific Reports, 8, 15637, 1-15.} \url{https://doi.org/10.1038/s41598-018-33819-8}
+#' @references Cabrieto, J., Adolf, J., Tuerlinckx, F., Kuppens, P., & Ceulemans, E. (2018). Detecting long-lived autodependency changes in a multivariate system via change point detection
+#' and regime switching models. \emph{Scientific Reports}, 8, 15637, 1-15. doi:10.1038/s41598-018-33819-8
+#'
+#' @references Cabrieto, J., Meers, K., Schat, E., Adolf, J. K., Kuppens, P., Tuerlinckx, F., & Ceulemans, E. (2022). kcpRS: An R package for performing kernel change point detection on 
+#' the running statistics of multivariate time series. \emph{Behavior Research Methods}, 54, 1092-1113. doi:10.3758/s13428-021-01603-8
 #'
 #' @export
 #' @importFrom stats cov

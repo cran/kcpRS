@@ -12,7 +12,7 @@ runCorr(data, wsize = 25)
 \item{wsize}{window size}
 }
 \value{
-Running correlationa time series
+Running correlations time series
 }
 \description{
 Extracts the running correlations by sliding a window comprised of \code{wsize} time points, and in each window,

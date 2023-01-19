@@ -4,9 +4,11 @@
 \name{MentalLoad}
 \alias{MentalLoad}
 \title{Mental Load Data}
-\format{Dataframe with 1393 rows and 4 columns. The first column indicates the experimental period,
+\format{
+Dataframe with 1393 rows and 4 columns. The first column indicates the experimental period,
 while the last three columns correspond to the three physiological measures monitored during the experiment:
-Heart rate (HR), respiration rate (RR) and petCO2.}
+Heart rate (HR), respiration rate (RR) and petCO2.
+}
 \usage{
 data(MentalLoad)
 }
@@ -17,7 +19,7 @@ Three physiological measures during a mental load assessment experiment on aviat
 data(MentalLoad)
 }
 \references{
-{ \cite{Grassmann, M., Vlemincx, E., von Leupoldt, A., & Van den Bergh, O. (2016). The role of respiratory measures to assess mental load in pilot
-selection. Ergonomics 59(6), 745-753. (\href{https://www.ncbi.nlm.nih.gov/pubmed/26444137}{PubMed})}}
+Grassmann, M., Vlemincx, E., von Leupoldt, A., & Van den Bergh, O. (2016). The role of respiratory measures to assess mental load in pilot
+                   selection. \emph{Ergonomics}, 59(6), 745-753. (\href{https://pubmed.ncbi.nlm.nih.gov/26444137}{PubMed})
 }
 \keyword{datasets}

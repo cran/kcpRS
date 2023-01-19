@@ -9,8 +9,7 @@
 #'
 #'@return \item{II}{A matrix of optimized scatters}
 #'@return \item{H}{A matrix of candidate changes point locations}
-NULL
-
+#'@return \item{medianK}{Median of the pairwise Euclidean distances}
 getScatterMatrix <- function(II_, X_, H_) {
     .Call('_kcpRS_getScatterMatrix', PACKAGE = 'kcpRS', II_, X_, H_)
 }

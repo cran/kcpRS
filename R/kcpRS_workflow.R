@@ -26,8 +26,8 @@
 #' \item{kcpAR}{\code{kcpRS} solution for the running autocorrelations. See output of \code{\link{kcpRS}} for further details.}
 #' \item{kcpCorr}{\code{kcpRS} solution for the running correlations. See output of \code{\link{kcpRS}} for further details.}
 #'
-#' @references \cite{Cabrieto, J., Adolf, J., Tuerlinckx, F., Kuppens, P., & Ceulemans, E. (in press). An objective, comprehensive and flexible statistical framework for
-#'  detecting early warning signs of mental health problems. Psychotherapy and Psychosomatics.}\url{https://doi.org/10.1159/000494356}
+#' @references Cabrieto, J., Adolf, J., Tuerlinckx, F., Kuppens, P., & Ceulemans, E. (2019). An objective, comprehensive and flexible statistical framework for
+#'  detecting early warning signs of mental health problems. \emph{Psychotherapy and Psychosomatics}, 88, 184-186. doi:10.1159/000494356
 #'
 #' @importFrom parallel detectCores
 #'

@@ -15,7 +15,7 @@ summary.kcpRS<-function(object,...){
   cat("\n")
 
   cat("    Permutation test:", ifelse(object$nperm>0, "Yes", "No") , "\n")
-  cat("        Number of permuted data sets used:", ifelse(object$nperm>0, object$nperm, NA) , "\n")
+  cat("        Number of permuted data sets:", ifelse(object$nperm>0, object$nperm, NA) , "\n")
 
   cat("\n")
   cat("\n")

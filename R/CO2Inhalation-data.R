@@ -11,7 +11,7 @@
 #'
 #' @keywords datasets
 #'
-#' @references { \cite{De Roover, K., Timmerman, M. E., Van Diest, I., Onghena, P., & Ceulemans, E. (2014). Switching principal component analysis for modeling means and covariance changes over time. Psychological Methods, 19, 113-132.} \url{https://doi.org/10.1037/a0034525}}
+#' @references De Roover, K., Timmerman, M. E., Van Diest, I., Onghena, P., & Ceulemans, E. (2014). Switching principal component analysis for modeling means and covariance changes over time. \emph{Psychological Methods}, 19, 113-132. doi:10.1037/a0034525
 #' @examples
 #' data(CO2Inhalation)
 "CO2Inhalation"

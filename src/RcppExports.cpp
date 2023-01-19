@@ -5,6 +5,11 @@
 
 using namespace Rcpp;
 
+#ifdef RCPP_USE_GLOBAL_ROSTREAM
+Rcpp::Rostream<true>&  Rcpp::Rcout = Rcpp::Rcpp_cout_get();
+Rcpp::Rostream<false>& Rcpp::Rcerr = Rcpp::Rcpp_cerr_get();
+#endif
+
 // getScatterMatrix
 List getScatterMatrix(NumericMatrix II_, NumericMatrix X_, NumericMatrix H_);
 RcppExport SEXP _kcpRS_getScatterMatrix(SEXP II_SEXP, SEXP X_SEXP, SEXP H_SEXP) {

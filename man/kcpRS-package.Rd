@@ -18,26 +18,26 @@ Two illustrative data sets are included: \code{\link{MentalLoad}} and \code{\lin
 }
 \description{Flagging change points on a user-specified running statistics through KCP (Kernel Change Point) detection. A KCP permutation test is first implemented to confirm whether there is at least one change point (\emph{k}>0) in the running statistics. If this permutation test is significant, a model selection procedure is implemented to choose the most optimal number of change points.}
 
-\author{Jedelyn Cabrieto (\email{jed.cabrieto@kuleuven.be})  and Kristof Meers
+\author{Jedelyn Cabrieto (\email{jed.cabrieto@kuleuven.be}) and Kristof Meers
 
-For the core KCP analysis, the authors built upon the codes from the Supplementary Material available in \url{https://doi.org/10.1080/01621459.2013.849605} by Matteson and James (2012).
+For the core KCP analysis, the authors built upon the codes from the Supplementary Material available in doi:10.1080/01621459.2013.849605 by Matteson and James (2012).
 
 }
 
 
 \references{
-\cite{Arlot, S., Celisse, A., & Harchaoui, Z. (2012). Kernel change-point detection.} \url{http://arxiv.org/abs/1202.3878}
+Arlot, S., Celisse, A., & Harchaoui, Z. (2019). A kernel multiple change-point algorithm via model selection. \emph{Journal of Machine Learning Research}, 20(162), 1-56.
 
-\cite{Cabrieto, J., Tuerlinckx, F., Kuppens, P., Grassmann, M., & Ceulemans, E. (2017). Detecting correlation changes in multivariate time series: A comparison of four non-parametric change point detection methods. Behavior Research Methods, 49, 988-1005.}\url{https://doi.org/10.3758/s13428-016-0754-9}
+Cabrieto, J., Tuerlinckx, F., Kuppens, P., Grassmann, M., & Ceulemans, E. (2017). Detecting correlation changes in multivariate time series: A comparison of four non-parametric change point detection methods. \emph{Behavior Research Methods}, 49, 988-1005. doi:10.3758/s13428-016-0754-9
 
-\cite{Cabrieto, J., Tuerlinckx, F., Kuppens, P., Hunyadi, B., & Ceulemans, E. (2018). Testing for the presence of correlation changes
-in a multivariate time series: A permutation based approach. Scientific Reports, 8, 769, 1-20.} \url{https://doi.org/10.1038/s41598-017-19067-2}
+Cabrieto, J., Tuerlinckx, F., Kuppens, P., Hunyadi, B., & Ceulemans, E. (2018). Testing for the presence of correlation changes
+in a multivariate time series: A permutation based approach. \emph{Scientific Reports}, 8, 769, 1-20. doi:10.1038/s41598-017-19067-2
 
-\cite{Cabrieto, J., Tuerlinckx, F., Kuppens, P., Wilhelm, F., Liedlgruber, M., & Ceulemans, E. (2018). Capturing correlation changes by applying kernel change point
-detection on the running correlations. Information Sciences, 447, 117-139.} \url{https://doi.org/10.1016/j.ins.2018.03.010}
+Cabrieto, J., Tuerlinckx, F., Kuppens, P., Wilhelm, F., Liedlgruber, M., & Ceulemans, E. (2018). Capturing correlation changes by applying kernel change point
+detection on the running correlations. \emph{Information Sciences}, 447, 117-139. doi:10.1016/j.ins.2018.03.010
 
-\cite{Cabrieto, J., Adolf, J., Tuerlinckx, F., Kuppens, P., & Ceulemans, E. (2018). Detecting long-lived autodependency changes in a multivariate system via change point detection
-and regime switching models. Scientific Reports, 8, 15637, 1-15.} \url{https://doi.org/10.1038/s41598-018-33819-8}
+Cabrieto, J., Adolf, J., Tuerlinckx, F., Kuppens, P., & Ceulemans, E. (2018). Detecting long-lived autodependency changes in a multivariate system via change point detection
+and regime switching models. \emph{Scientific Reports}, 8, 15637, 1-15. doi:10.1038/s41598-018-33819-8
 }
 
 \seealso{
