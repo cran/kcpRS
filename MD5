@@ -1,6 +1,6 @@
-e1c516ef4dccbcdbb0b8ab228345f4b1 *DESCRIPTION
+750be0973f6999d58a35128d596dde89 *DESCRIPTION
 b308a57fc30749f87688c73aba153c8f *NAMESPACE
-0318aca86895be8bf8ddc2d8a3b0f1fd *NEWS.md
+8cef53895ca8ace79c29cfcac7db6478 *NEWS.md
 98a8cb4967d15eda96cdbd8cd02b7dbf *R/CO2Inhalation-data.R
 0af1ef3b7b635739cb7189416eabd35c *R/MentalLoad-data.R
 bf6ce844abb081888d351a95b700f6eb *R/RcppExports.R
@@ -26,7 +26,7 @@ ddfa7625e637fbc44ffc92102d561ebd *data/MentalLoad.rdata
 849029978a12e48fbe3eaa5e838a1525 *man/CO2Inhalation.Rd
 2e396034c016571fc757492d4abd9432 *man/MentalLoad.Rd
 3b52113a314ad17f9b7f7f3aca6fe2d7 *man/getScatterMatrix.Rd
-e2ba4e1589aaf8dc09521ccf6152c214 *man/kcpRS-package.Rd
+bf31bc4ecc8f5626dd7e08e3b0da3cea *man/kcpRS-package.Rd
 d0c7d1bf95ff50e535f8de04b8b54e2f *man/kcpRS.Rd
 66900fb71b1bb97631b09a67880e1e2e *man/kcpRS_workflow.Rd
 3586c613cc5410ac26f3f34a599592fa *man/kcpa.Rd

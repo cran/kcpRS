@@ -3,13 +3,6 @@
 \docType{package}
 \title{KCP on the running statistics}
 \details{
-\tabular{ll}{
-Package: \tab \pkg{kcpRS}\cr
-Type: \tab Package\cr
-Version: \tab 1.0.0\cr
-Date: \tab 15-03-2019\cr
-License: \tab GPL (>=2)\cr
-}
 This package contains the function \code{\link{kcpRS}} that can accept a user-defined function, \code{RS_fun}, which should derive the running statistics of interest. For examples, see \code{\link{runMean}}, \code{\link{runVar}}, \code{\link{runAR}} and \code{\link{runCorr}}. \code{kcpRS} performs a full change point analysis on the running statistics starting from locating the optimal change points given \emph{k}, significance testing if \emph{k}>0, and finally, determining the most optimal \emph{k}. This function calls the function \code{\link{kcpa}} to find the most optimal change points given \emph{k} and then the \code{\link{permTest}} function to carry out the permutation test. The model selection step is embedded in the \code{kcpRS} function.
 
 This package also contains the function \code{\link{kcpRS_workflow}} which carries out a stepwise change point analysis to flag changes in 4 basic time series statistics: mean, variance, autocorrelation (lag 1) and correlations.

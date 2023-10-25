@@ -1,3 +1,6 @@
+## version 1.1.1
+- Fix version information in manual page
+
 ## version 1.1.0
 - Added Scree test as alternative way to determine the optimal number of change points
 - Handle situation where median of the rolling (permuted) data is zero

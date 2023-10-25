@@ -1,7 +1,7 @@
 Package: kcpRS
 Type: Package
 Title: Kernel Change Point Detection on the Running Statistics
-Version: 1.1.0
+Version: 1.1.1
 Authors@R: 
   c(person(given = "Jedelyn",
            family = "Cabrieto",
@@ -38,7 +38,7 @@ Config/testthat/edition: 3
 LinkingTo: Rcpp
 RoxygenNote: 7.2.3
 NeedsCompilation: yes
-Packaged: 2023-01-19 13:25:40 UTC; u0046811
+Packaged: 2023-10-25 12:55:13 UTC; u0046811
 Author: Jedelyn Cabrieto [aut],
   Kristof Meers [aut, cre],
   Evelien Schat [ctb],
@@ -47,4 +47,4 @@ Author: Jedelyn Cabrieto [aut],
   Francis Tuerlinckx [ctb],
   Eva Ceulemans [ctb]
 Repository: CRAN
-Date/Publication: 2023-01-19 23:30:14 UTC
+Date/Publication: 2023-10-25 13:10:02 UTC
